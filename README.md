@@ -14,50 +14,50 @@ Plugin:
 
 Test Coverage:
 
-![ScreenShot](/screenshots/Test_Coverage.jpeg)
+![ScreenShot](/SVV_Screenshots/Test_Coverage.jpeg)
 
 Static analysis:
 
 Unresolved:
 
-![ScreenShot](/screenshots/Unresolved1.png)
+![ScreenShot](/SVV_Screenshots/Unresolved1.png)
 
-![ScreenShot](/screenshots/Unresolved2.png)
+![ScreenShot](/SVV_Screenshots/Unresolved2.png)
 
-![ScreenShot](/screenshots/Unresolved3.png)
+![ScreenShot](/SVV_Screenshots/Unresolved3.png)
 
-![ScreenShot](/screenshots/Unresolved4.png)
+![ScreenShot](/SVV_Screenshots/Unresolved4.png)
 
-![ScreenShot](/screenshots/Unresolved5.png)
+![ScreenShot](/SVV_Screenshots/Unresolved5.png)
 
-![ScreenShot](/screenshots/Unresolved6.png)
+![ScreenShot](/SVV_Screenshots/Unresolved6.png)
 
-![ScreenShot](/screenshots/Unresolved7.png)
+![ScreenShot](/SVV_Screenshots/Unresolved7.png)
 
-![ScreenShot](/screenshots/Unresolved8.png)
+![ScreenShot](/SVV_Screenshots/Unresolved8.png)
 
 Resolved:
 
-![ScreenShot](/screenshots/Resolved1.png)
+![ScreenShot](/SVV_Screenshots/Resolved1.png)
 
-![ScreenShot](/screenshots/Resolved2.png)
+![ScreenShot](/SVV_Screenshots/Resolved2.png)
 
-![ScreenShot](/screenshots/Resolved3.png)
+![ScreenShot](/SVV_Screenshots/Resolved3.png)
 
 Dynamic analysis:
 
 YourKit:
 
-![ScreenShot](/screenshots/YourKit.png)
+![ScreenShot](/SVV_Screenshots/YourKit.png)
 
-![ScreenShot](/screenshots/YourKit2.png)
+![ScreenShot](/SVV_Screenshots/YourKit2.png)
 
-![ScreenShot](/screenshots/YourKit3.png)
+![ScreenShot](/SVV_Screenshots/YourKit3.png)
 
-![ScreenShot](/screenshots/YourKit4.png)
+![ScreenShot](/SVV_Screenshots/YourKit4.png)
 
-![ScreenShot](/screenshots/YourKit5.png)
+![ScreenShot](/SVV_Screenshots/YourKit5.png)
 
-![ScreenShot](/screenshots/YourKit6.png)
+![ScreenShot](/SVV_Screenshots/YourKit6.png)
 
 
