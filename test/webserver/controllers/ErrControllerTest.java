@@ -1,6 +1,6 @@
 package webserver.controllers;
 
-import org.junit.After;
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -9,9 +9,10 @@ import java.io.PrintStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-import static org.junit.Assert.*;
-import static org.mockito.Mockito.mock;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
+@SuppressFBWarnings("NM_METHOD_NAMING_CONVENTION")
 public class ErrControllerTest {
 
     private ErrController errController;
@@ -20,14 +21,15 @@ public class ErrControllerTest {
         errController = new ErrController();
     }
 
+    @SuppressFBWarnings("DM_DEFAULT_ENCODING")
     @Test
-    public void ErrorHeader() throws IOException {
+    public void errorHeader() throws IOException {
         ServerSocket serverSocket = new ServerSocket(10009);
         Socket clientSocket = serverSocket.accept();
         PrintStream os = new PrintStream(clientSocket.getOutputStream());
         System.out.println("Open Browser: http://localhost:10009/");
         String errMessage = "Error Message Received";
-        assertEquals("Expected this output: ", "Message sent to:" + os + "With the following message" + errMessage, errController.ErrorHeader(os, errMessage));
+        assertEquals("Expected this output: ", "Message sent to:" + os + "With the following message" + errMessage, errController.errorHeader(os, errMessage));
         assertNotNull(errController);
     }
 }

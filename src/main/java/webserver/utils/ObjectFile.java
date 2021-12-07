@@ -1,5 +1,7 @@
 package webserver.utils;
 
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
+
 import java.io.DataInputStream;
 import java.io.File;
 import java.io.PrintStream;
@@ -7,9 +9,9 @@ import java.io.PrintStream;
 public class ObjectFile {
 
 
-    public static String FileFoundHeader(PrintStream os, int fileLength, File file)
+    public static String fileFoundHeader(PrintStream os, int fileLength, File file)
     {
-        String contentType = CheckFile(file.toString());
+        String contentType = checkFile(file.toString());
         os.print("HTTP:/1.0 200 OK\n");
         os.print("Content-type:" +  contentType + "\n");
         os.print("Content-length: "+fileLength+"\n");
@@ -19,7 +21,7 @@ public class ObjectFile {
         return "Message sent to:" + os + " the file" + file + " content-type: " + contentType + " with file length:" + fileLength;
     }
 
-    public static File OpenFile(String filename)
+    public static File openFile(String filename)
     {
         File file = new File(filename);
         if (file.exists()) return file;
@@ -27,7 +29,8 @@ public class ObjectFile {
         return new File(filename.substring(1));
     }
 
-    public static String SendReply(PrintStream os, DataInputStream in, int flen)
+    @SuppressFBWarnings("RR_NOT_CHECKED")
+    public static String sendReply(PrintStream os, DataInputStream in, int flen)
     {
         try
         {
@@ -43,7 +46,7 @@ public class ObjectFile {
         return "Successfully sending the reply " + os;
     }
 
-    private static String CheckFile(String fileExtension) {
+    private static String checkFile(String fileExtension) {
         if(fileExtension.contains(".css")) return "text/css";
         if(fileExtension.contains(".html")) return "text/html";
         if(fileExtension.contains(".jpg")) return "image/jpg";
