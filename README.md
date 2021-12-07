@@ -34,7 +34,7 @@ Unresolved:
 
 ![ScreenShot](/SVV_Screenshots/Unresolved7.png)
 
-![ScreenShot](/SVV_Screenshots/Unresolved8.png)
+![ScreenShot](/SVV_Screenshots/Unresolved8.jpeg)
 
 Resolved:
 
