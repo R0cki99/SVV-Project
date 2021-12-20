@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="SVV-Proj" target="1.5" />
+      <module name="SVV-Proj" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>

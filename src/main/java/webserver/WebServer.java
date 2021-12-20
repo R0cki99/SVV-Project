@@ -21,7 +21,7 @@ public class WebServer extends Thread {
 	public static String SERVER_STATUS = "STOP_SERVER";
 	@SuppressFBWarnings({"DM_EXIT", "EI_EXPOSE_REP2", "SC_START_IN_CTOR"})
 
-	public WebServer(Socket clientSoc) {
+	public WebServer(Socket clientSoc, String serverRootWeb, String serverMaintenance) {
 		clientSocket = clientSoc;
 		if(SERVER_STATUS.equals("EXIT")) System.exit(1);
 		if(SERVER_STATUS.equals("RUN_SERVER")) start();

@@ -20,6 +20,10 @@ import static org.mockito.Mockito.mock;
 @SuppressFBWarnings("DM_DEFAULT_ENCODING")
 public class WebServerTest {
 
+    public static String SERVER_ADDRESS = "http://localhost:";
+    public static String SERVER_ROOT_WEB = "..\\svv-project\\src\\main\\java\\html\\";
+    public static String SERVER_MAINTENANCE = "..\\svv-project\\src\\main\\java\\html\\maintenance\\index.html";
+
     WebServer webServer = null;
     @SuppressFBWarnings("URF_UNREAD_FIELD")
     private ErrController errControllerMock =mock(ErrController.class);;
@@ -38,7 +42,7 @@ public class WebServerTest {
     public void webServer() throws IOException {
         ServerSocket serverSocket = new ServerSocket(10017);
         Socket clientSocket = serverSocket.accept();
-        webServer = new WebServer(clientSocket);
+        webServer = new WebServer(clientSocket, SERVER_ROOT_WEB, SERVER_MAINTENANCE);
     }
 
 
@@ -47,7 +51,7 @@ public class WebServerTest {
     public void testMaintenanceServerMock() throws IOException {
         ServerSocket serverSocket = new ServerSocket(10018);
         Socket clientSocket = serverSocket.accept();
-        webServer = new WebServer(clientSocket);
+        webServer = new WebServer(clientSocket, SERVER_ROOT_WEB, SERVER_MAINTENANCE);
 
         String path = "..\\svv-project\\src\\main\\java\\html\\maintenance\\index.html";
         File file = new File(path);
@@ -63,7 +67,7 @@ public class WebServerTest {
     public void testRunMock() throws IOException {
         ServerSocket serverSocket = new ServerSocket(10019);
         Socket clientSocket = serverSocket.accept();
-        webServer = new WebServer(clientSocket);
+        webServer = new WebServer(clientSocket, SERVER_ROOT_WEB, SERVER_MAINTENANCE);
 
         assertEquals("Expected a good path", "src/main/java/html/index/index.html", pathControllerMock.getPath("GET / HTTP/1.1"));
 
